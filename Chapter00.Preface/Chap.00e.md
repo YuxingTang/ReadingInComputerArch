@@ -91,13 +91,21 @@ We also want thank the wonderful staff at Morgan Kaufmann for their talents, eff
 ## References
 
 [1]. G. S. Almasi and A. Gottlieb. Highly Parallel Computing. Benjamin / Cummings Publishing Company, Inc., 1994.
+
 [2]. C. G. Bell and A. Newell. Computer Structures: Readings and Examples. McGraw Hill, 1971.
+
 [3]. David Culler, J. P. Singh, and Anoop Gupta. Parallel Computer Architecture: A Hardware/Software Approach. Morgan Kaufmann, 1998.
+
 [4]. John L. Hennessy and David A. Patterson. Computer Architecture: A Quantitative Approach. Morgan Kaufmann, second edition, 1996.
+
 [5]. T. S. Kuhn. The Structure of Scientific Revolutions. Univ. of Chicago Press, second edition, 1970.
+
 [6]. D. P. Siewiorek, C. G. Bell, and A. Newell. Computer Structures: Principles and Examples. McGraw Hill, 1982.
+
 [7]. Alan J. Smith. Cache Memories. ACM Computing Surveys, 14(3):473–530, 1982.
+
 [8]. Gurindar Sohi. 25 Years of the International Symposia on Computer Architecture: Selected Papers. ACM Press, 1998.
+
 [9]. Harold S. Stone. High-Performance Computer Architecture. Addison Wesley, third edition, 1993.
 
 ## Included Papers
