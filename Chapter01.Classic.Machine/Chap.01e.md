@@ -25,8 +25,12 @@ During the first third of the twentieth century, technology  was limited to mech
 
 The ENIAC had over 18,000 vacuum tubes. Vacuum tubes require a heater element in order to displace electrons from their cathodes. This requires a significant amount of power. The heater element also has a tendency to burn out after a period of operation. Thus, based on the total power consumed by all the tubes and the expected time between tube failures, there is a maximum practical size of a vacuum tube computer. At the time of ENIAC, many vacuum tubes had lifetimes of only a few thousand hours. Worse yet, tube failures were spread over the lifetime of the tube as described by probability distributions.Given these handicaps, one would think it would be impossible to build a computer with 18,000 tubes given these characteristics.
 
-ENIAC: Courtesy of the Hagley Museum and Library
-Fig. 1.1. A close-up view of the ENIAC with Pres Eckert. The large panel of rotary switches mounted on wheels is one of the three constant tables. Programs were entered using the banks of switches below waist level.
+<center>
+
+![Fig1.1](pics/Chapt01.F1.png)</center>
+*ENIAC: Courtesy of the Hagley Museum and Library*  
+*Fig. 1.1. A close-up view of the ENIAC with Pres Eckert. The large panel of rotary switches mounted on wheels is one of the three constant tables. Programs were entered using the banks of switches below waist level.*
+
 
 
 J. Presper Eckert solved the tube reliability problem with a number of techniques:
@@ -47,8 +51,11 @@ As can be imagined, the primary limitation of the ENIAC was its lack of a memory
 
 Maurice Wilkes attended the 1946 summer institute at the Moore School and immediately returned Cambridge University and embarked on implementing a stored-program computer. First, Wilkes attacked the problem of providing a memory for the computer. By early 1947, he had designed and built the first working mercury acoustic delay memory (see Fig. 1.2). It consisted of 16 steel tubes, each capable of storing 32 words of 17 bits each (16 bits plus a sign) for a total of 512 words (roughly 1 Kbytes). Now that a suitable memory technology had been demonstrated, design and construction of the machine could proceed. Because the mercury acoustic delay lines were a bit-serial memory technology, this dictated a bit-serial machine organization.
 
-Courtesy of The Computer Museum of Boston
-Fig. 1.2. Maurice Wilkes looking at the first set of mercury delay line memories for EDSAC. This set contained 16 tubes, of which the top row of five can be seen [25).
+<center>
+
+![Fig1.2](pics/Chapt01.F2.png)</center>
+*Courtesy of The Computer Museum of Boston*  
+*Fig. 1.2. Maurice Wilkes looking at the first set of mercury delay line memories for EDSAC. This set contained 16 tubes, of which the top row of five can be seen [25).*
 
 Wilkes was more interested in having a machine he could program than pushing the state of the art in hardware technology. As a result of this conservative hardware design, he settled on a machine cycle time (500 kHz) that was slower by a factor of two than other machines being discussed at the time. Partly as a result of this conservative hardware design and early success with practical memory technology, Electronic Delay Storage Automatic Calculator (EDSAC) became the first large-scale operational stored program computer in May of 1949. This lead to the project leading the way in many software innovations. One crucial innovation from the early experience of the EDSAC project was a subroutine call instruction that saved the calling address for later use as a return address. At the time, this was called the Wheeler jump, after David J. Wheeler who invented it while he was working on the project as a graduate student. Another innovation from Wheeler was the world's first relocating program loader.
 
@@ -70,7 +77,10 @@ The Whirlwind machine was designed and built in the late 1940s and early 1950s a
 
 To solve this problem, Jay W. Forrester and others developed magnetic core memories. When the electrostatic memory was replaced with a primitive core memory, the operating speed of Whirlwind doubled, and the maintenance time on the machine fell from four hours per day to two hours per week, and the mean time between memory failures rose from two hours to two weeks! Core memory technology was crucial in enabling Whirlwind to perform 50,000 operations per second in 1952 and to operate reliably for relatively long periods of time.
 
-Fig. 1.3. The IBM Stretch's relations.
+<center>
+
+![Fig1.3](pics/Chapt01.F3.png)</center>
+*Fig. 1.3. The IBM Stretch's relations.*
 
 Now that a good memory technology had been found, the tube circuits used for arithmetic and control became the major limitation.
 
@@ -78,8 +88,11 @@ Now that a good memory technology had been found, the tube circuits used for ari
 
 By 1955, quite a few manufacturers were büilding computers based on vacuum tubes and magnetic core memories. Because the number of components available for design of the CPU's was limited by the reliability and cost of vacuum tubes, computers tended to be quite specialized in their targeted market segments. For example, a machine targeted toward scientific users could not afford to have circuitry for packed-decimal arithmetic for accounting; similarly, machines targeted for commercial users could not afford to support floating point. Moreover, machines targeted at high-performance users tended to have larger word lengths, which lower performance and lower cost machines could not afford. Coupled with programming in assembly language, this led to considerable development costs for all of the different models as well as incompatible software bases.
 
-Stretch (IBM 7030): Photograph courtesy of IBM
-Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.
+<center>
+
+![Fig1.4](pics/Chapt01.F4.png)</center>
+*Stretch (IBM 7030): Photograph courtesy of IBM*  
+*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
 
 
 IBM had a scientific and a commercial tube-based computer line, starting with the 701 and 702 models, respectively. These models were significantly redesigned and improved and sold as the 704 and 705. In 1955, IBM initiated a research project to produce a computer one hundred times faster than both the 704 or the 705 models and incorporating both scientific and commercial functionality. This machine was formally called the 7030, but most people knew it by its project name "Stretch" [2, 5, 6]. Its place in the IBM product line is shown in Fig. 1.3. A photograph of Stretch is shown in Fig. 1.4.
@@ -92,7 +105,19 @@ The designers realized that improving the performance of the CPU without improvi
 
 Although Stretch did not fully meet its goal of 100 times increase in performance (especially on commercial codes, which had byte-serial data storage see Table 1.1), it resulted in many major advances in architecture and technology. Moreover, in combining both scientific and commercial capabilities, it was a precursor to the IBM System 360 architecture.
 
-Table 1.1. Key Operation Latencies in the IBM 704, 705, and Stretch
+*Table 1.1. Key Operation Latencies in the IBM 704, 705, and Stretch*
+<center>
+
+|  |  | **Time in Microseconds** |  |
+| :---- | :----: | :----: | :----: |
+| **Operation** | **IBM 704** | **IBM 705** | **Stretch** |
+| Floating add | 84 | - | 1.0 |
+| Floating multiply | 204 | - | 1.8 |
+| Floating divide | 216 | - | 7.0 |
+| Five-digit add | - | 119 | 3.5 |
+| Five-digit multiply | - | 799 | 40.0 |
+| Five-digit divide | - | 4828 | 65.0 |
+</center>
 
 ### 1.2.6 Large-Scale Planar Silicon Transistor Computers
 
@@ -101,10 +126,10 @@ There is a striking chronological relationship between the appearance of the sil
 Stretch was designed with germanium transistors. By the early 1960s, planar (double-diffused) silicon transistors had been developed, with significantly improved reliability and performance characteristics over germanium transistors. "Planar" refers to the fact that those transistors were made by diffusing impurities into a flat wafer of silicon to form the base and emitter.
 
 The main benefits of silicon planar transistors over germanium are:
-higher junction temperatures allowed (and hence higher reliability at lower temperatures)
-higher current and power levels available
-higher speed (by using a n-p-n configuration instead of p-n-p)
-lower cost
+  * higher junction temperatures allowed (and hence higher reliability at lower temperatures)
+  * higher current and power levels available
+  * higher speed (by using a n-p-n configuration instead of p-n-p)
+  * lower cost
 
 The combination of all these advantages was a key enabler of a generation of machines in the mid 1960s with greatly improved performance, reliability, and cost. These machines included the CDC-6600 and the IBM 360 family.
 
@@ -112,6 +137,11 @@ The combination of all these advantages was a key enabler of a generation of mac
 
 Until the late 1990s, high-end CPUs were a breed apart. Historically, high-end computers were made using bipolar transistors. This is in contrast to the MOS transistors used in microprocessors today. Bipolar transistors in the 1960s were relatively easy to make, because their active portion consisted of two p-n junctions that could be grown by diffusion processes. They were also more than ten times faster than early MOS transistors, which were not produced in practical numbers until the late 1960s.
 
+<center>
+
+![Fig1.4](pics/Chapt01.F4.png)</center>
+*Stretch (IBM 7030): Photograph courtesy of IBM*  
+*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
 Transistor reliability graph from page 21 of Design of a Computer: The CDC 6600 by Jim Thornton.
 Fig. 1.5. Reliability improvement in transistors over the 10-year period from 1954 to 1964.
 
@@ -119,6 +149,11 @@ Because bipolar transistors were relatively fast, much of the delay in an 1960s-
 
 There were many models of supercomputers built by different manufacturers. In this section, we focus primarily on computers designed by Seymour Cray for three reasons. First, most of them were the highest performance computers of their day. Second, they introduced a number of important architectural and implementation features. Third, by concentrating on a single lineage of computers, the underlying trends in technology become clearer.
 
+<center>
+
+![Fig1.4](pics/Chapt01.F4.png)</center>
+*Stretch (IBM 7030): Photograph courtesy of IBM*  
+*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
 Fig. 1.6. A 1604 logic "book."
 
 The shape of machines built by Seymour Cray is an interesting study in itself. Seymour Cray was the champion of computer packaging and computational bandwidth. His first large scale machine, the CDC 1604, used a single "book" configuration. Two backplanes stuffed with sixteen rows of small circuit modules were flexibly mounted to the rest of the machine by hinges. This allowed the boards to be spread apart during construction or testing, like the pages in a young child's board book (see Fig. 1.6).
@@ -133,11 +168,21 @@ A major advance in the 7600 over the 6600 was the introduction of fully pipeline
 
 Instead of large blocks of unpipelined logic which had to be close to each other, pipelining the functional units allowed each individual functional unit pipestage to be smaller physically and faster even though the whole pipelined functional unit was larger. Fig. 1.8 shows the machine was constructed in the shape of a large "C", with four panels on three sides and two panels and an opening on the fourth side.
 
+<center>
+
+![Fig1.4](pics/Chapt01.F4.png)</center>
+*Stretch (IBM 7030): Photograph courtesy of IBM*  
+*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
 Figure 26 from page 35 of Thornton's Design of a Computer
 Fig. 1.7. The classic 6600 plus-shaped machine con-figuration, widely used in later supercomputers by other makers. In the 6600, each page of the four books consisted of up to 756 "cordwood" logic modules.
 
 The complete pipelining enabled the use of a large "C"-shaped chassis, but may have also required it. Because the machine was fully pipelined, the bandwidth required between units was greater than in the 6600. The restriction of edge-only access to each page in a book would provide much lower bandwidth than if the complete face of every page were accessible for wiring. Whatever the case, the 7600 was certainly much easier to wire than the confined space between the spines of the four 6600 books. And as a final benefit, when seen from above the machine is the first letter of Seymour Cray's last name. Later machines at Control Data Corporation (CDC) under Jim Thornton elongated the classic plus-sign shape into a "t" shape.
 
+<center>
+
+![Fig1.4](pics/Chapt01.F4.png)</center>
+*Stretch (IBM 7030): Photograph courtesy of IBM*  
+*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
 Fig. 1.8. The 7600 large "C"-shaped chasis configuration.
 
 Another major improvement in the 7600 over the 6600 was a significantly upgraded I/O system. Unlike the 6600, which implemented ten virtual peripheral processor units (PPUs) on a single physical PPU by time multiplexing, the 7600 had up to fifteen physical PPUs. This provided much higher performance I/O capabilities.
