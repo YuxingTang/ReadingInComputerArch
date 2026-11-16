@@ -157,17 +157,17 @@ The shape of machines built by Seymour Cray is an interesting study in itself. S
 
 The CDC 6600 combined four books of four pages each with their spines facing the center of the machine. This formed an plus-shaped "+" center of the machine, as shown in Fig. 1.7. This configuration was later widely used by large mainframes and Japanese supercomputers. For photographs of the 6600 and other Cray machines, see the Web companion to this book for links to online photographs.
 
-### 1.3.2 The CDC 7600
-
-A major advance in the 7600 over the 6600 was the introduction of fully pipelined units. This gave it a peak performance around seven times faster than the 6600, even though the clock was not quite four times faster (27.5 ns). It also reduced the need to keep the components in such close proximity to each other.
-
-Instead of large blocks of unpipelined logic which had to be close to each other, pipelining the functional units allowed each individual functional unit pipestage to be smaller physically and faster even though the whole pipelined functional unit was larger. Fig. 1.8 shows the machine was constructed in the shape of a large "C", with four panels on three sides and two panels and an opening on the fourth side.
-
 <center>
 
 ![Fig1.7](pics/Chapt01.F7.png)</center>
 *Figure 26 from page 35 of Thornton's Design of a Computer*  
 *Fig. 1.7. The classic 6600 plus-shaped machine con-figuration, widely used in later supercomputers by other makers. In the 6600, each page of the four books consisted of up to 756 "cordwood" logic modules.*
+
+### 1.3.2 The CDC 7600
+
+A major advance in the 7600 over the 6600 was the introduction of fully pipelined units. This gave it a peak performance around seven times faster than the 6600, even though the clock was not quite four times faster (27.5 ns). It also reduced the need to keep the components in such close proximity to each other.
+
+Instead of large blocks of unpipelined logic which had to be close to each other, pipelining the functional units allowed each individual functional unit pipestage to be smaller physically and faster even though the whole pipelined functional unit was larger. Fig. 1.8 shows the machine was constructed in the shape of a large "C", with four panels on three sides and two panels and an opening on the fourth side.
 
 The complete pipelining enabled the use of a large "C"-shaped chassis, but may have also required it. Because the machine was fully pipelined, the bandwidth required between units was greater than in the 6600. The restriction of edge-only access to each page in a book would provide much lower bandwidth than if the complete face of every page were accessible for wiring. Whatever the case, the 7600 was certainly much easier to wire than the confined space between the spines of the four 6600 books. And as a final benefit, when seen from above the machine is the first letter of Seymour Cray's last name. Later machines at Control Data Corporation (CDC) under Jim Thornton elongated the classic plus-sign shape into a "t" shape.
 
