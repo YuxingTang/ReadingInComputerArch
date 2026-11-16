@@ -77,11 +77,6 @@ The Whirlwind machine was designed and built in the late 1940s and early 1950s a
 
 To solve this problem, Jay W. Forrester and others developed magnetic core memories. When the electrostatic memory was replaced with a primitive core memory, the operating speed of Whirlwind doubled, and the maintenance time on the machine fell from four hours per day to two hours per week, and the mean time between memory failures rose from two hours to two weeks! Core memory technology was crucial in enabling Whirlwind to perform 50,000 operations per second in 1952 and to operate reliably for relatively long periods of time.
 
-<center>
-
-![Fig1.3](pics/Chapt01.F3.png)</center>
-*Fig. 1.3. The IBM Stretch's relations.*
-
 Now that a good memory technology had been found, the tube circuits used for arithmetic and control became the major limitation.
 
 ### 1.2.5 Germanium Transistor-Based Computers: The IBM Stretch
@@ -90,16 +85,20 @@ By 1955, quite a few manufacturers were büilding computers based on vacuum tube
 
 <center>
 
+![Fig1.3](pics/Chapt01.F3.png)</center>
+*Fig. 1.3. The IBM Stretch's relations.*
+
+IBM had a scientific and a commercial tube-based computer line, starting with the 701 and 702 models, respectively. These models were significantly redesigned and improved and sold as the 704 and 705. In 1955, IBM initiated a research project to produce a computer one hundred times faster than both the 704 or the 705 models and incorporating both scientific and commercial functionality. This machine was formally called the 7030, but most people knew it by its project name "Stretch" [2, 5, 6]. Its place in the IBM product line is shown in Fig. 1.3. A photograph of Stretch is shown in Fig. 1.4.
+
+<center>
+
 ![Fig1.4](pics/Chapt01.F4.png)</center>
 *Stretch (IBM 7030): Photograph courtesy of IBM*  
 *Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
 
-
-IBM had a scientific and a commercial tube-based computer line, starting with the 701 and 702 models, respectively. These models were significantly redesigned and improved and sold as the 704 and 705. In 1955, IBM initiated a research project to produce a computer one hundred times faster than both the 704 or the 705 models and incorporating both scientific and commercial functionality. This machine was formally called the 7030, but most people knew it by its project name "Stretch" [2, 5, 6]. Its place in the IBM product line is shown in Fig. 1.3. A photograph of Stretch is shown in Fig. 1.4.
-
 By switching to early germanium transistor technology, the circuitry in Stretch ran ten times faster. Also, by using a high-speed core memory, memory access became about six times faster than the core memory in the 704. However, the project goals of two orders of magnitude speed improvement went far beyond the speedups obtainable from new technologies. This would require many architectural innovations which would, in turn, require many more circuits than previous computers, but this was made possible by the increased reliability, smaller size, and lower cost of transistors compared with vacuum tubes. This resulted in a theme that is still being exploited today: using additional circuits provided by technology to exploit instruction-level parallelism.
 
-With Stretch, the exploitation of instruction-level parallelism took many novel forms. First, the processing of instructions was pipelined (this was called "overlapped" or "lookahead" then, so that six instructions were in some phase of execution at any point in time. Second, in order to provide higher bandwidth to memory, memory was split into multiple banks. Because successive words were stored in different banks, new data could often be fetched every 0.2 us even though the core memory had a 2-us latency. Third, an autonomous transfer engine was provided to transfer data between the memory and peripheral devices (e.g., DMA or a primitive channel).
+With Stretch, the exploitation of instruction-level parallelism took many novel forms. First, the processing of instructions was pipelined (this was called "overlapped" or "lookahead" then), so that six instructions were in some phase of execution at any point in time. Second, in order to provide higher bandwidth to memory, memory was split into multiple banks. Because successive words were stored in different banks, new data could often be fetched every 0.2 us even though the core memory had a 2-us latency. Third, an autonomous transfer engine was provided to transfer data between the memory and peripheral devices (e.g., DMA or a primitive channel).
 
 The designers realized that improving the performance of the CPU without improving the performance of the I/O devices would result in low overall system speedup. Thus, as part of the Stretch project the first disk drives with multiple read/write arms were developed. Their capacity (2 Mbytes) and transfer speed were far in excess of anything else available at the time and resulted in the abandonment of drums for secondary storage.
 
@@ -121,7 +120,7 @@ Although Stretch did not fully meet its goal of 100 times increase in performanc
 
 ### 1.2.6 Large-Scale Planar Silicon Transistor Computers
 
-There is a striking chronological relationship between the appearance of the silicon planar transistor and the Control Data 6600. -J. E. Thornton, Design of a Computer: The Control Data 6600 [21], p. 19. See also Fig. 1.5, reprinted from p. 21 of Thornton [21].
+> There is a striking chronological relationship between the appearance of the silicon planar transistor and the Control Data 6600. -J. E. Thornton, *Design of a Computer: The Control Data 6600* [21], p. 19. See also Fig. 1.5, reprinted from p. 21 of Thornton [21].
 
 Stretch was designed with germanium transistors. By the early 1960s, planar (double-diffused) silicon transistors had been developed, with significantly improved reliability and performance characteristics over germanium transistors. "Planar" refers to the fact that those transistors were made by diffusing impurities into a flat wafer of silicon to form the base and emitter.
 
@@ -139,11 +138,9 @@ Until the late 1990s, high-end CPUs were a breed apart. Historically, high-end c
 
 <center>
 
-![Fig1.4](pics/Chapt01.F4.png)</center>
-*Stretch (IBM 7030): Photograph courtesy of IBM*  
-*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
-Transistor reliability graph from page 21 of Design of a Computer: The CDC 6600 by Jim Thornton.
-Fig. 1.5. Reliability improvement in transistors over the 10-year period from 1954 to 1964.
+![Fig1.5](pics/Chapt01.F5.png)</center>
+*Transistor reliability graph from page 21 of Design of a Computer: The CDC 6600 by Jim Thornton.*  
+*Fig. 1.5. Reliability improvement in transistors over the 10-year period from 1954 to 1964.*
 
 Because bipolar transistors were relatively fast, much of the delay in an 1960s- or 1970s-era high-end computer resulted from the time required to send signals through the wires of the computer. Some high-end computers (such as the CDC Cyber 205 series) used coaxial wiring that allowed transmission of signals at 70% of the speed of light. However, the Cray machines used slightly slower twisted-pair wiring but relied on denser packaging and circuitry to reduce the size of the machine, hence reducing the delays caused by communicating from one part of the machine to another.
 
@@ -151,10 +148,8 @@ There were many models of supercomputers built by different manufacturers. In th
 
 <center>
 
-![Fig1.4](pics/Chapt01.F4.png)</center>
-*Stretch (IBM 7030): Photograph courtesy of IBM*  
-*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
-Fig. 1.6. A 1604 logic "book."
+![Fig1.6](pics/Chapt01.F6.png)</center>
+*Fig. 1.6. A 1604 logic "book."*
 
 The shape of machines built by Seymour Cray is an interesting study in itself. Seymour Cray was the champion of computer packaging and computational bandwidth. His first large scale machine, the CDC 1604, used a single "book" configuration. Two backplanes stuffed with sixteen rows of small circuit modules were flexibly mounted to the rest of the machine by hinges. This allowed the boards to be spread apart during construction or testing, like the pages in a young child's board book (see Fig. 1.6).
 
@@ -170,20 +165,16 @@ Instead of large blocks of unpipelined logic which had to be close to each other
 
 <center>
 
-![Fig1.4](pics/Chapt01.F4.png)</center>
-*Stretch (IBM 7030): Photograph courtesy of IBM*  
-*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
-Figure 26 from page 35 of Thornton's Design of a Computer
-Fig. 1.7. The classic 6600 plus-shaped machine con-figuration, widely used in later supercomputers by other makers. In the 6600, each page of the four books consisted of up to 756 "cordwood" logic modules.
+![Fig1.7](pics/Chapt01.F7.png)</center>
+*Figure 26 from page 35 of Thornton's Design of a Computer*  
+*Fig. 1.7. The classic 6600 plus-shaped machine con-figuration, widely used in later supercomputers by other makers. In the 6600, each page of the four books consisted of up to 756 "cordwood" logic modules.*
 
 The complete pipelining enabled the use of a large "C"-shaped chassis, but may have also required it. Because the machine was fully pipelined, the bandwidth required between units was greater than in the 6600. The restriction of edge-only access to each page in a book would provide much lower bandwidth than if the complete face of every page were accessible for wiring. Whatever the case, the 7600 was certainly much easier to wire than the confined space between the spines of the four 6600 books. And as a final benefit, when seen from above the machine is the first letter of Seymour Cray's last name. Later machines at Control Data Corporation (CDC) under Jim Thornton elongated the classic plus-sign shape into a "t" shape.
 
 <center>
 
-![Fig1.4](pics/Chapt01.F4.png)</center>
-*Stretch (IBM 7030): Photograph courtesy of IBM*  
-*Fig. 1.4. An overall view of Stretch, which was first shipped to customers in 1961.*
-Fig. 1.8. The 7600 large "C"-shaped chasis configuration.
+![Fig1.8](pics/Chapt01.F8.png)</center>
+*Fig. 1.8. The 7600 large "C"-shaped chasis configuration.*
 
 Another major improvement in the 7600 over the 6600 was a significantly upgraded I/O system. Unlike the 6600, which implemented ten virtual peripheral processor units (PPUs) on a single physical PPU by time multiplexing, the 7600 had up to fifteen physical PPUs. This provided much higher performance I/O capabilities.
 
