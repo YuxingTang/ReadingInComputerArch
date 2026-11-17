@@ -160,7 +160,7 @@ The CDC 6600 combined four books of four pages each with their spines facing the
 <center>
 
 ![Fig1.7](pics/Chapt01.F7.png)</center>
-*Figure 26 from page 35 of Thornton's Design of a Computer*  
+<small>*Figure 26 from page 35 of Thornton's Design of a Computer*</small>  
 *Fig. 1.7. The classic 6600 plus-shaped machine con-figuration, widely used in later supercomputers by other makers. In the 6600, each page of the four books consisted of up to 756 "cordwood" logic modules.*
 
 ### 1.3.2 The CDC 7600
@@ -239,7 +239,7 @@ Many young engineers believe the "best product" will win in the marketplace. Unf
 
 In this section we introduce papers that describe the technology, implementation, and economics of classic machines. 
 
-### 1.5.1 Amdahl, Blaauw, and Brooks's "Architecture of the IBM System/360% [1]
+### 1.5.1 Amdahl, Blaauw, and Brooks's "Architecture of the IBM System/360[1]
 
 In November 1961, IBM formed a group known as the SPREAD committee, which was chartered to set IBM's design goals for the next decade and to create an engineering and marketing plan to unify the efforts of the three IBM computer divisions. At the end of December 1961, the report of the group was released. It advocated production of a family of compatible machines ranging from the smallest commercial machines of the day to scientific computers even more powerful than Stretch. After much engineering effort, on April 7, 1964 IBM announced the 360 architecture with over 150 new products, services, and devices [17]. The family name 360 was chosen by IBM to say that it excelled at all "360 degrees of data processing."
 
@@ -247,9 +247,9 @@ At the same time as the announcement, an excellent paper giving the design ratio
 
 ### 1.5.2 Thornton's "Parallel Operation in the Control Data 6600" [22]
 
-Last week Control Data ... announced the 6600 system. I understand that in the laboratory developing the system there are only 34 people including the janitor. Of these, 14 are engineers and 4 are programmers. ... Contrasting this modest effort with our vast development activi-ties, I fail to understand why we have lost our industry leadership position by letting someone else offer the world's most powerful computer."—Thomas Watson, IBM CEO 8/28/63
+> Last week Control Data ... announced the 6600 system. I understand that in the laboratory developing the system there are only 34 people including the janitor. Of these, 14 are engineers and 4 are programmers. ... Contrasting this modest effort with our vast development activi-ties, I fail to understand why we have lost our industry leadership position by letting someone else offer the world's most powerful computer."—Thomas Watson, IBM CEO 8/28/63
 
-It seems like Mr. Watson has answered his own question. —Seymour Cray's response to Thomas Waston
+> It seems like Mr. Watson has answered his own question. —Seymour Cray's response to Thomas Waston
 
 As the two quotes above show, the CDC 6600 was developed by a small team of focused, excellent designers. They had a narrow target market (scientific computing), and hence the machine could be specialized for that market. One example of this is the 60-bit native word length (very long for those years), and that it only supported two data operand types: 60-bit floating-point values and 60-bit integers. Another was that it was the first machine to have independent floating-point functional units (which required a large percentage of the machine's resources). The use of specialized functional units resulted in much lower operation latencies than the microcoded adder/shifter data paths that were common at the time in other implementations. For example, the latency of a 60-bit precision floating-point addition was only 400 ns! This is in contrast to IBM 360 implementations, which had to implement decimal and string data types and were generally built around smaller data busses. (The IBM 360/91, which was not shipped until November 1967, was an exception, because it omitted hardware support for decimal arithmetic.) The IBM 360 architecture was also limited to four 64-bit floating-point registers, which limited the potential overlap between floating-point instructions and necessitated the invention of the Tomasulo algorithm (a form of register renaming) for the 360/91 [23].
 
@@ -259,7 +259,7 @@ The 6600 introduced a number of architectural innovations that impacted computer
 
 Second, the 6600 introduced a form of dynamic scheduling called as “scoreboard”. The scoreboard allowed instructions to issue out of order and took advantage of the parallelism afforded by the machine's ten independent functional units. Because the machine did not have condition codes (as did the IBM 360), it was much easier to reorder the execution of instructions. The machine had eight operand registers, which could be used for either floating-point or fixed-point data values, and eight address registers. Writing a result to address registers 1-5 had the side effect of loading the contents of the memory address specified by that result into an operand register. Writing a result to address registers 6 or 7 had the side effect of writing the contents of the corresponding operand register to main memory. Having explicit registers for the result of memory address calculations led to natural forms of auto-incrementing and auto-decrementing loads and stores.
 
-This book is dedicated to A6 & A7, without which none of the results in this book could have been saved. —Ralph Grishman's book dedication for Assembly Language Programming for the Control Data 6000 Series and the Cyber 70 Series [8]
+> This book is dedicated to A6 & A7, without which none of the results in this book could have been saved. —Ralph Grishman's book dedication for Assembly Language Programming for the Control Data 6000 Series and the Cyber 70 Series [8]
 
 The 6600 was also a excellent technical implementation. It was heavily pipelined for its day (integer addition had a three cycle latency). Because it could issue an instruction per cycle in the best case, the deeper pipeline helped it to exploit instruction-level parallelism. To support the computational bandwidth of the functional units, the main memory of the machine was banked thirty-two ways!
 
