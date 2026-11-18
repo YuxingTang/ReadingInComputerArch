@@ -1,17 +1,22 @@
 # Chapter 1: 经典机器：技术、实现和经济性
 
- * IBM System/360的体系结构  --------------------------- 17
-  *G.M. Amdahl, G. A. Blaauw, F. P. Brooks, Jr.*
- * 在Control Data 6600内的并行操作 -------------------- 32
-  *J.E. Thornton*
- * CRAY-1计算机系统 ------------------------------------ 40
-  *R.M. Russell*
- * CRAY-1计算机技术C ------------------------------------ 50
-  *J.S. Kolodzey*
- * 在集成电路中集成更多组件 ------------- 56
-  *G.E. Moore*
- * 微型计算机历史--发明与演进--- 60
-  *S.Mazor*
+<center>
+
+|  |  |
+| :---- | :----: |
+| **IBM System/360的体系结构** | 17 |
+| *G.M. Amdahl, G. A. Blaauw, F. P. Brooks, Jr.* | [PDF链接](pdf/01.Architecture.of.the.IBM.System.360.pdf) |
+| **在Control Data 6600内的并行操作** | 32 |
+| *J.E. Thornton* | [PDF链接](pdf/02.Parallel.Operation.in.the.Control.Data.6600.pdf) |
+| **CRAY-1计算机系统** | 40 |
+| *R.M. Russell* | [PDF链接](pdf/03.The.CRAY-1.computer.system.pdf) |
+| **CRAY-1计算机技术** | 50 |
+| *J.S. Kolodzey* | [PDF链接](pdf/04.Cray.1.Computer.Technology.pdf) |
+| **在集成电路中集成更多组件** | 56 |
+| *G.E. Moore* | [PDF链接](pdf/05.Cramming.More.Components.Onto.Integrated.Circuits.pdf) |
+| **微型计算机历史--发明与演进** | 60 |
+| *S.Mazor* | [PDF链接](pdf/06.The.History.of.the.Microcomputer.Invention.and.Evolution.pdf) |
+</center>
 
 ## 1.1 介绍
 
@@ -159,8 +164,8 @@
 <center>
 
 ![Chapter01F7](pics/Chapt01.F7.png)</center>
-<small>*图26摘自Thornton的《计算机设计》第35页*</small>  
-**图 1.7. 经典的6600加号机器配置，后来被其他制造商广泛用于超级计算机。在 6600 中，四本书的每一页都包含多达756 个“cordwood”逻辑模块**。
+<small>*摘自Thornton的《计算机设计》第35页图26*</small>  
+**图1.7. 经典的6600加号机器配置，后来被其他制造商广泛用于超级计算机。在 6600 中，四本书的每一页都包含多达756 个“cordwood”逻辑模块**。
 
 ### 1.3.2 CDC 7600
 
@@ -173,7 +178,7 @@
 <center>
 
 ![Chapter01F8](pics/Chapt01.F8.png)</center>
-&emsp;&emsp; <center>**图 1.8. 7600大型“C”形机箱配置。**</center>
+**图1.8. 7600大型“C”形机箱配置。**
 
 &emsp;&emsp; 7600相对于6600的另一项重大改进是显著升级的I/O系统。与通过时间复用在单个物理PPU上实现10个虚拟外设处理器单元(PPU: Peripheral Processor Uninit)的6600不同，7600最多有15个物理PPU。这提供了更高性能的I/O功能。
 
@@ -246,9 +251,9 @@
 
 ### 1.5.2 Thornton的“Control Data 6600中的并行操作”[22]
 
-> 上周，Control Data...宣布了6600系统。据我所知，在开发该系统的实验室中，包括看门人在内只有34人。其中，14人是工程师，4人是程序员。...将这种微不足道的努力与我们广泛的开发活动进行对比，我不明白为什么我们让别人提供世界上最强大的计算机而失去了行业领导地位。”—Thomas Watson，IBM首席执行官，1963年8月28日***
+> 上周，Control Data...宣布了6600系统。据我所知，在开发该系统的实验室中，包括看门人在内只有34人。其中，14人是工程师，4人是程序员。...将这种微不足道的努力与我们广泛的开发活动进行对比，我不明白为什么我们让别人提供世界上最强大的计算机而失去了行业领导地位。”—Thomas Watson，IBM首席执行官，1963年8月28日
 
-> 似乎Watson先生已经回答了自己的问题。—Seymour Cray对Thomas Waston的回应***
+> 似乎Watson先生已经回答了自己的问题。—Seymour Cray对Thomas Waston的回应
 
 &emsp;&emsp; 正如上面的两段引文所示，CDC 6600是由一支专注、优秀的设计师组成的小团队开发的。他们的目标市场很窄（科学计算），因此该机器可以专门针对该市场。其中一个例子是60位的原生字长（在那些年里这个机器字很长），并且它只支持两种数据操作数类型：60位浮点值和60位整数。另一个例子是，它是第一台具有独立浮点功能单元的机器（这需要大量机器资源）。使用专门的功能单元导致操作延迟比当时在其他实现中常见的微码加法器/移位器数据路径低得多。例如，60位精度浮点加法的延迟仅为400纳秒！这与IBM 360实现形成了鲜明对比，后者必须实现十进制和字符串数据类型，并且通常围绕较小的数据总线构建。（直到1967年11月才发货的IBM 360/91是个例外，因为它省略了对十进制算术的硬件支持。）IBM 360体系结构还仅限于4个64位浮点寄存器，这限制了浮点指令之间的潜在重叠，并需要为360/91发明Tomasulo算法（一种寄存器重命名形式）[23]。
 
@@ -316,29 +321,29 @@ $N_{芯片中的器件} = 1.59^{年份-1959}$
 
 &emsp;&emsp; 许多书籍包含大量有关20世纪40年代至70年代计算机的信息。值得注意的例子包括Bell和Newell[4]、Siewiorek、Bell和Newell[20]以及Bell、Mudge和McNamara[3]的书籍。
 
-[1] G. M. Amdahl, G. A. Blaauw, and Frederick P. Brooks Jr.; "Architecture of the IBM System/360," IBM Journal of Research and Development, pp. 87-101, Apr. 1964.
-[2] C. Bashe, L. Johnson, J. Palmer, and E. Pugh, IBM's Early Computers, Cambridge, MA: MIT Press, 1986.
-[3] G. Bell, C. Mudge, and J. McNamara, Computer Engineering: A DEC View of Hardware Systems Design. Bedford, MA: Digital Press, 1978.
-[4] G. Bell and A. Newell, Computer Structures: Readings and Examples. New York: McGraw-Hill, 1971.
+[1] G. M. Amdahl, G. A. Blaauw, and Frederick P. Brooks Jr.; "Architecture of the IBM System/360," IBM Journal of Research and Development, pp. 87-101, Apr. 1964.  
+[2] C. Bashe, L. Johnson, J. Palmer, and E. Pugh, IBM's Early Computers, Cambridge, MA: MIT Press, 1986.  
+[3] G. Bell, C. Mudge, and J. McNamara, Computer Engineering: A DEC View of Hardware Systems Design. Bedford, MA: Digital Press, 1978.  
+[4] G. Bell and A. Newell, Computer Structures: Readings and Examples. New York: McGraw-Hill, 1971.  
 [5] G. A. Blaauw and F. P. Brooks Jr., Computer Architecture: Concepts and Evolution. Reading, MA: Addison Wesley Longman, 1997.
-[6] W. Bucholz (Ed.), Planning a Computer System. New York: McGraw-Hill 1962. IBM Stretch (7030)).
-[7] R. H. Denard, F. H. Gaensslen, H.-N. Yu, V. L. Rideout, E. Bassous, and A. R. LeBlanc, "Design of ion-implanted MOSFETs with very small physical dimensions," IEEE Journal of Solid-State Circuits, SC(9):256-268, 1974.
-[8] R. Grishman. Assembly Languages Programming for the Control Data 6000 Series and the Cyber 70 Series. New York: Alogrithmics Press, 1974. 
-[9] J. L. Hennessy and N. P. Jouppi, "Computer technology and architecture: An evolving interaction," IEEE Computer, 24(9):18-29, 1991.
-[10] R. W. Hockney and C. R. Jesshope, Parallel Computers 2. Bristol, England: Adam Hilger, 1988.
-[11] J. S. Kolodzey, "Cray-1 computer technology," IEEE Transactions on Component Hybrids, and Manufacturing Technology, CHMT-4(2):181-186, 1981.
-[12] J. Langdon and E.J. Van Derveer, "Design of a high-speed transistor for the ASLT current switch," IBM Journal of Research and Development, 11(1):69-73, 1967.
-[13] S. Mazor, "The history of the microcomputer-Invention and evolution," Proceedings of the lEEE, 83(12):1601-1608, 1995.
-[14] E. McLellan, "The Alpha AXP architecture and 21064 processor," IEEE Micro, 13(3):36-47, 1993.
+[6] W. Bucholz (Ed.), Planning a Computer System. New York: McGraw-Hill 1962. IBM Stretch (7030).  
+[7] R. H. Denard, F. H. Gaensslen, H.-N. Yu, V. L. Rideout, E. Bassous, and A. R. LeBlanc, "Design of ion-implanted MOSFETs with very small physical dimensions," IEEE Journal of Solid-State Circuits, SC(9):256-268, 1974.  
+[8] R. Grishman. Assembly Languages Programming for the Control Data 6000 Series and the Cyber 70 Series. New York: Alogrithmics Press, 1974.   
+[9] J. L. Hennessy and N. P. Jouppi, "Computer technology and architecture: An evolving interaction," IEEE Computer, 24(9):18-29, 1991.  
+[10] R. W. Hockney and C. R. Jesshope, Parallel Computers 2. Bristol, England: Adam Hilger, 1988.  
+[11] J. S. Kolodzey, "Cray-1 computer technology," IEEE Transactions on Component Hybrids, and Manufacturing Technology, CHMT-4(2):181-186, 1981.  
+[12] J. Langdon and E.J. Van Derveer, "Design of a high-speed transistor for the ASLT current switch," IBM Journal of Research and Development, 11(1):69-73, 1967.  
+[13] S. Mazor, "The history of the microcomputer-Invention and evolution," Proceedings of the lEEE, 83(12):1601-1608, 1995.  
+[14] E. McLellan, "The Alpha AXP architecture and 21064 processor," IEEE Micro, 13(3):36-47, 1993.  
 [15] C. Mead and L. Conway, Introduction to VLSI. Reading, MA: Addison-Wesley, 1980.
-[16] G. E. Moore, "Cramming more components onto integrated circuits," Electronics, pp. 114-117, Apr. 1965.
-[17] E. Pugh, L. Johnson, and J. Palmer, IBM's 360 and Early 370 Systems. Cambridge, MA: MIT Press.
-[18] K. C. Redmond and T. M. Smith, Project Whirlwind: The History of a Pioneer Computer. Bedford, MA: Digital Press, 1980.
-[19] R. M. Russell, "The Cray-1 computer system," Communications of the ACM, 21(31):63-72, 1978.
-[20] D. Siewiorek, G. Bell, and A. Newell, Computer Structures: Principles and Examples. New York:McGraw-Hill, 1982.
-[21] J. E. Thornton, Design of a Computer: The Control Data 6600. Glenview, IL: Scott Foresman, 1970.
-[22] J. E. Thornton, "Parallel operation in the Control Data 6600," Proceedings of the Fall Joint Computers Conference, vol. 26, pp. 33-40, 1964.
-[23] R. M. Tomasulo, "A efficient algorithm for exploiting multiple arithmetic units," IBM Journal of Research and Development, 11(1):25-33, 1967.
+[16] G. E. Moore, "Cramming more components onto integrated circuits," Electronics, pp. 114-117, Apr. 1965.  
+[17] E. Pugh, L. Johnson, and J. Palmer, IBM's 360 and Early 370 Systems. Cambridge, MA: MIT Press.  
+[18] K. C. Redmond and T. M. Smith, Project Whirlwind: The History of a Pioneer Computer. Bedford, MA: Digital Press, 1980.  
+[19] R. M. Russell, "The Cray-1 computer system," Communications of the ACM, 21(31):63-72, 1978.  
+[20] D. Siewiorek, G. Bell, and A. Newell, Computer Structures: Principles and Examples. New York:McGraw-Hill, 1982.  
+[21] J. E. Thornton, Design of a Computer: The Control Data 6600. Glenview, IL: Scott Foresman, 1970.  
+[22] J. E. Thornton, "Parallel operation in the Control Data 6600," Proceedings of the Fall Joint Computers Conference, vol. 26, pp. 33-40, 1964.  
+[23] R. M. Tomasulo, "A efficient algorithm for exploiting multiple arithmetic units," IBM Journal of Research and Development, 11(1):25-33, 1967.  
 [24] J. von Neumann, First Draft of a Report on the EDVAC. Tech. Rep. Philadelphia: University of Pennsylvania Moore School, 1945.
-[25] M. V. Wilkes, Computing Perspectives. San Francisco, CA: Morgan Kaufmann, 1995.
-[26] M. R. Williams, A History of Computing Technology, 2nd ed. Los Alamitos, CA: IEEE Press, 1997.
+[25] M. V. Wilkes, Computing Perspectives. San Francisco, CA: Morgan Kaufmann, 1995.  
+[26] M. R. Williams, A History of Computing Technology, 2nd ed. Los Alamitos, CA: IEEE Press, 1997.  
